@@ -1,4 +1,4 @@
-version: '3'
+version: '2'
 
 services:
   mongo-express:
@@ -24,10 +24,10 @@ services:
     ports:
       - "27017:27017"
     volumes:
-      - /home/mongodb/Desenvolvimento/Docker/Volumes/MongoDB:/data/db
+      - /home/renatogroffe/Desenvolvimento/Docker/Volumes/MongoDB:/data/db
     networks:
       - mongo-compose-network
 
-networks: 
+networks:
     mongo-compose-network:
-      driver: bridge
+      drive: bridge

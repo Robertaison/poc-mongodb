@@ -7,6 +7,7 @@ import org.testcontainers.containers.DockerComposeContainer;
 import java.io.File;
 
 public class MongoApplicationTests {
+
     @ClassRule
     private static DockerComposeContainer environment = new DockerComposeContainer(
             new File("src/test/resources/docker-compose.yml")
