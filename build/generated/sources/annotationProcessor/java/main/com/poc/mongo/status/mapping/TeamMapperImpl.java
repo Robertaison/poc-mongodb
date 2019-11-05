@@ -9,22 +9,22 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2019-11-04T17:32:46-0200",
+    date = "2019-11-05T12:19:44-0200",
     comments = "version: 1.3.1.Final, compiler: javac, environment: Java 12.0.2 (Oracle Corporation)"
 )
 @Component
 public class TeamMapperImpl implements TeamMapper {
 
     @Override
-    public Team requestToStatus(TeamRequest transitionRequest) {
-        if ( transitionRequest == null ) {
+    public Team requestToTeam(TeamRequest teamRequest) {
+        if ( teamRequest == null ) {
             return null;
         }
 
         Team team = new Team();
 
-        team.setName( transitionRequest.getName() );
-        team.setMember( memberRequestToMember( transitionRequest.getMember() ) );
+        team.setName( teamRequest.getName() );
+        team.setMember( memberRequestToMember( teamRequest.getMember() ) );
 
         return team;
     }

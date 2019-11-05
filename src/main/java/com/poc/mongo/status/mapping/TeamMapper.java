@@ -4,13 +4,13 @@ import com.poc.mongo.status.application.http.request.TeamRequest;
 import com.poc.mongo.status.domain.document.Team;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-import org.mapstruct.Mappings;
+import org.mapstruct.ReportingPolicy;
 
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring", unmappedTargetPolicy = ReportingPolicy.IGNORE)
 public interface TeamMapper {
 
-    @Mappings({
-        @Mapping(target = "id", ignore = true),
-    })
-    Team requestToStatus(TeamRequest transitionRequest);
+    @Mapping(target = "id", ignore = true)
+    @Mapping(target = "member.updatedAt", ignore = true)
+    Team requestToTeam(TeamRequest teamRequest);
+
 }
