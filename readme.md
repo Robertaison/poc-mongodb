@@ -4,7 +4,7 @@ O intuito dessa poc é testar integração do spring-boot com o mongo e alguns o
 
 ## docker-compose.yml
 
-para utilização do banco sem necessidade de instalação local, pode se usar o arquivo docker-compose na raiz, que dispoem de interface via web para gerenciamento da base.
+para utilização do banco sem necessidade de instalação local, pode se usar o arquivo docker-compose que esta na raiz do projeto, que dispoem de interface via web para gerenciamento da base.
 
 Para mains intruções sobre, pode se usar esse artigo, no qual essa poc foi baseada
 
