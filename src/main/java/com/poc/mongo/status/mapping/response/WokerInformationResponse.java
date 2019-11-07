@@ -6,7 +6,7 @@ import lombok.Setter;
 
 import java.time.LocalDateTime;
 
-@Setter
+@Data
 public class WokerInformationResponse {
 
     private String document;

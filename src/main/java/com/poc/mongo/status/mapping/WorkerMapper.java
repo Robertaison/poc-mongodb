@@ -14,8 +14,8 @@ public interface WorkerMapper {
     @Mapping(target = "lastUpdade", ignore = true)
     Worker convertToEntity(WorkerRequest workerRequest);
 
-    @Mapping(target="dateAdmission", dateFormat = "dd-MM-yyyy")
-    @Mapping(target="lastUpdade", dateFormat = "dd-MM-yyyy")
-    @Mapping(target="wokerInformation.birthDate", source = "wokerInformation.birthDate", dateFormat = "dd-MM-yyyy")
+    @Mapping(target="dateAdmission", dateFormat = "dd/MM/yyyy")
+    @Mapping(target="lastUpdade", dateFormat = "dd/MM/yyyy")
+    @Mapping(target="wokerInformation.birthDate", source = "wokerInformation.birthDate", dateFormat = "dd/MM/yyyy")
     WorkerResponse convertToResponse(Worker worker);
 }
