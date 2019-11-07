@@ -1,7 +1,6 @@
 package com.poc.mongo.status.service;
 
 import com.poc.mongo.status.application.http.request.TeamRequest;
-import com.poc.mongo.status.domain.document.Team;
 
 import java.util.List;
 
