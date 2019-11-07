@@ -1,7 +1,7 @@
 package com.poc.mongo.status.resource;
 
-import com.poc.mongo.status.mapping.WorkerRequest;
-import com.poc.mongo.status.mapping.WorkerResponse;
+import com.poc.mongo.status.mapping.request.WorkerRequest;
+import com.poc.mongo.status.mapping.response.WorkerResponse;
 import com.poc.mongo.status.service.WorkerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-public class TeamController {
+public class WorkerController {
 
     @Autowired
     private WorkerService workerService;

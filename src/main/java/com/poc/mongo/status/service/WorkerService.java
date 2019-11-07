@@ -1,14 +1,15 @@
 package com.poc.mongo.status.service;
 
-import com.poc.mongo.status.application.http.request.TeamRequest;
+import com.poc.mongo.status.mapping.request.WorkerRequest;
+import com.poc.mongo.status.mapping.response.WorkerResponse;
 
 import java.util.List;
 
-public interface TeamService {
+public interface WorkerService {
 
-    void getTeam(String name);
+    WorkerResponse getWorker(String name);
 
-    void save(TeamRequest teamRequest);
+    void save(WorkerRequest workerRequest);
 
-    List<Team> findAll();
+    List<WorkerResponse> findAll();
 }
