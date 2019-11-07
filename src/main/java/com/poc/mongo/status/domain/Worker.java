@@ -24,13 +24,13 @@ public class Worker{
 
     private String job;
 
-    private WokerInformation wokerInformation;
+    private WorkerInformation workerInformation;
 
     @CreatedDate
     private LocalDateTime dateAdmission;
 
     @LastModifiedDate
-    private LocalDateTime lastUpdade;
+    private LocalDateTime lastUpdate;
 }
 
 

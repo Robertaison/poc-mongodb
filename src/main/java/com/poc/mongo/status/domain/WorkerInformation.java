@@ -2,14 +2,12 @@ package com.poc.mongo.status.domain;
 
 import lombok.Data;
 
-import java.time.LocalDateTime;
-
 @Data
-public class WokerInformation {
+public class WorkerInformation {
 
     private String document;
 
-    private LocalDateTime birthDate;
+    private String birthDate;
 
     private Contact contact;
 }

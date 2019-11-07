@@ -1,10 +1,7 @@
 package com.poc.mongo.status.mapping.response;
 
-import com.poc.mongo.status.domain.WokerInformation;
+import com.poc.mongo.status.domain.WorkerInformation;
 import lombok.Data;
-import lombok.Setter;
-
-import java.time.LocalDateTime;
 
 @Data
 public class WorkerResponse {
@@ -13,9 +10,9 @@ public class WorkerResponse {
 
     private String job;
 
-    private WokerInformation wokerInformation;
+    private WorkerInformation workerInformation;
 
-    private LocalDateTime dateAdmission;
+    private String dateAdmission;
 
-    private LocalDateTime lastUpdade;
+    private String lastUpdate;
 }

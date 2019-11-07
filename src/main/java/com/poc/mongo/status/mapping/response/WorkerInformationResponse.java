@@ -7,7 +7,7 @@ import lombok.Setter;
 import java.time.LocalDateTime;
 
 @Data
-public class WokerInformationResponse {
+public class WorkerInformationResponse {
 
     private String document;
 
