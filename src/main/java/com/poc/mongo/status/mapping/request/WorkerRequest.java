@@ -1,6 +1,5 @@
 package com.poc.mongo.status.mapping.request;
 
-import com.poc.mongo.status.domain.WorkerInformation;
 import lombok.Builder;
 import lombok.Getter;
 
