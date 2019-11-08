@@ -1,20 +1,26 @@
 package com.poc.mongo;
 
+import com.poc.mongo.factory.RequestBuilder;
+import com.poc.mongo.status.mapping.request.WorkerRequest;
 import io.restassured.http.ContentType;
 import org.junit.Before;
 import org.junit.ClassRule;
 import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpStatus;
+import org.springframework.test.context.junit4.SpringRunner;
 import org.testcontainers.containers.DockerComposeContainer;
 
 import java.io.File;
 
 import static io.restassured.RestAssured.given;
 
+@SpringBootTest
 public class MongoApplicationTests extends RestAssuredConfig {
 
     @ClassRule
-    private static DockerComposeContainer environment = new DockerComposeContainer(
+    public static DockerComposeContainer environment = new DockerComposeContainer(
             new File("src/test/resources/docker-compose.yml")
     );
 
@@ -25,13 +31,15 @@ public class MongoApplicationTests extends RestAssuredConfig {
 
     @Test
     public void shouldSaveOnDbs() {
+        final WorkerRequest workerRequest = RequestBuilder.validWorkder()
+                                                            .build();
 
-//        given().
-//                contentType(ContentType.JSON)
-//                    .body()
-//                .when()
-//                    .post("/transition")
-//                .then()
-//                    .statusCode(HttpStatus.CREATED.value());
+        given().
+                contentType(ContentType.JSON)
+                .body(workerRequest)
+                .when()
+                .post("/post")
+                .then()
+                .statusCode(HttpStatus.CREATED.value());
     }
 }
